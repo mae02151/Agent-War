@@ -1,0 +1,20 @@
+{
+  "name": "agent-arena",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "dev:server": "npm run dev --workspace @agent-arena/server",
+    "dev:web": "npm run dev --workspace @agent-arena/web",
+    "dev:bridge": "npm run dev --workspace @agent-arena/bridge"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
